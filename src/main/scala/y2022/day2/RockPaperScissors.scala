@@ -1,7 +1,6 @@
-package day2
+package y2022.day2
 
-import scala.io.Source
-import scala.util.Using
+import utils.FileReader
 
 trait Move {
   val score: Int
@@ -91,10 +90,7 @@ object RockPaperScissors extends App {
     }
     .map(game => game._1.vs(game._2)).sum
 
-  val input: List[List[String]] = Using(Source.fromFile("/Users/jolney/Projects/aoc22/src/main/scala/day2/input.txt")) {
-    _.getLines.toList
-      .map(_.split(" ").toList)
-  }.get
+  val input: List[List[String]] = FileReader.readInput("y2022/day2").map(_.split(" ").toList)
 
   println(calculateScore(input))
   println(calculateScoreUpdatedTactics(input))

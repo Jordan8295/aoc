@@ -1,7 +1,6 @@
-package day3
+package y2022.day3
 
-import scala.io.Source
-import scala.util.Using
+import utils.FileReader
 
 object RucksackReorganisation extends App {
   def findErrors(bags: List[(String, String)]): List[Char] = bags.map(
@@ -18,9 +17,7 @@ object RucksackReorganisation extends App {
     items.map(_.toInt).map(priority => if (priority >= 97) priority - 96 else priority - 38).sum
   }
 
-  val input: List[String] = Using(Source.fromFile("/Users/jolney/Projects/aoc22/src/main/scala/day3/input.txt")) {
-    _.getLines.toList
-  }.get
+  val input: List[String] = FileReader.readInput("y2022/day3")
 
   val bags = input.map(bag => bag.splitAt(bag.length / 2))
   val groups = input.grouped(3).toList

@@ -1,7 +1,8 @@
-package day3
+package y2022.day3
 
 import org.scalatest.matchers.should
 import org.scalatest.wordspec.AnyWordSpec
+import y2022.day3.RucksackReorganisation
 
 class RucksackReorganisationSpec extends AnyWordSpec with should.Matchers {
   "Finding errors" should {

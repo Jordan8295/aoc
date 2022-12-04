@@ -1,7 +1,8 @@
-package day1
+package y2022.day1
 
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers._
+import y2022.day1.CalorieCounting
 
 class CalorieCountingSpec extends AnyWordSpec with should.Matchers {
   "The max calorie count" should {

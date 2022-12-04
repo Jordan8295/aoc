@@ -1,7 +1,8 @@
-package day2
+package y2022.day2
 
 import org.scalatest.matchers.should
 import org.scalatest.wordspec.AnyWordSpec
+import y2022.day2.{Paper, Rock, RockPaperScissors, Scissors}
 
 class RockPaperScissorsSpec extends AnyWordSpec with should.Matchers {
   "Against rock" should {
